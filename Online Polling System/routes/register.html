@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Registration</title>
+    <link rel="stylesheet" href="../css/stylesheet.css">
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <style>
+        #address {
+            width: 95%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        #imagepart {
+            border: 2px solid black;
+            border-radius: 5px;
+            padding: 10px;
+            width: 95%;
+            text-align: center;
+        }
+        #role {
+            border: 2px solid black;
+            border-radius: 5px;
+            padding: 10px;
+            width: 95%;
+            text-align: center;
+        }
+        #role select {
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        .white-box {
+            background: rgba(255, 255, 255, 0.65);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+            width: 500px;
+            margin-top: 20px;
+        }
+
+        .white-box input[type="text"],
+        .white-box input[type="number"],
+        .white-box input[type="password"],
+        .white-box input[type="file"],
+        .white-box select {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+
+        .form-pair {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .form-pair input {
+            flex: 1;
+        }
+
+        .register-btn {
+            padding: 10px 20px;
+            width: 100%;
+            font-size: 15px;
+            background-color: #0d47a1;
+            color: white;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        .register-btn:hover {
+            background-color: #2980b9;
+        }
+
+        a {
+            color: #0d47a1;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<center>
+    <div id="headerSection">
+        <h1>Online Polling System</h1>
+    </div>
+    <hr>
+
+    <div id="bodySection" class="white-box">
+        <h3 style="color: rgb(31, 110, 166);"> <b>Register</b></h3>
+        <form action="../api/register.php" method="POST" enctype="multipart/form-data">
+            <div class="form-pair">
+                <input type="text" name="name" placeholder="Enter Name">
+                <input type="number" name="mobile" placeholder="Enter mobile">
+            </div>
+
+            <div class="form-pair">
+                <input type="password" name="password" placeholder="Password">
+                <input type="password" name="cpassword" placeholder="Confirm Password">
+            </div>
+
+            <input id="address" type="text" name="address" placeholder="Address"><br><br>
+
+            <div id="imagepart">
+                <b>Upload Image:</b> <input type="file" name="photo">
+            </div><br>
+
+            <div id="role">
+                <b>Select Your Role: </b>
+                <select name="role">
+                    <option value="1">Voter</option>
+                    <option value="2">Group</option>
+                </select>
+            </div><br>
+            
+            <button type="submit" class="register-btn">Register</button><br><br>
+           <span><b>Already a user?</b> <a href="../index.html"><b>Login Here</b></a></span> 
+        </form>
+    </div>
+</center>
+</body>
+</html>

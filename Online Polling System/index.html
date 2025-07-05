@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Polling System</title>
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="icon" type="image/x-icon" href="logo.png">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <center>
+        <div id="headerSection">
+            <h1><i class="fas fa-vote-yea"></i> Online Polling System</h1>
+        </div>
+        <hr>
+
+        <div class="login-card">
+            <div id="bodySection">
+                <form action="api/login.php" method="POST">
+                    <h2><i class="fas fa-sign-in-alt"></i> Login</h2>
+                    <input type="number" name="mobile" placeholder="Enter Mobile Number" required>
+                    <input type="password" name="password" placeholder="Enter Password" required>
+                    <select id="dropbox" name="role" required>
+                        <option value="1">Voter</option>
+                        <option value="2">Group</option>
+                    </select>
+                    <button id="loginbtn" type="submit"><i class="fas fa-unlock"></i> Login</button>
+                    <h4><b>New User?</b> <a href="routes/register.html"><i class="fas fa-user-plus"></i> Register Here</a></h4>
+                </form>
+            </div>
+        </div>
+    </center>
+</body>
+</html>
